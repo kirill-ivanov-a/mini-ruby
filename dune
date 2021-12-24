@@ -1,0 +1,13 @@
+(executable
+ (name REPL)
+ (public_name Ruby.Repl)
+ (modules REPL)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(cram
+ (deps demos/demoParser.exe demos/demoRecursionFact.exe demoRecursionFib.exe
+   demoArithmeticNumbers.exe demoArithStringList.exe demoBoolCmpOp.exe
+   demoLambda.exe demoCycle.exe demoObjects.exe demoAssign.exe demoLists.exe
+   demoStringInterp.exe demoPrettyPrinter.exe))

@@ -1,0 +1,96 @@
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A -w -26)
+   (-short-paths))))
+
+(executable
+ (name demoParser)
+ (modules demoParser)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoRecursionFact)
+ (modules demoRecursionFact)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoRecursionFib)
+ (modules demoRecursionFib)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoArithmeticNumbers)
+ (modules demoArithmeticNumbers)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoArithStringList)
+ (modules demoArithStringList)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoBoolCmpOp)
+ (modules demoBoolCmpOp)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoLambda)
+ (modules demoLambda)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoCycle)
+ (modules demoCycle)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoObjects)
+ (modules demoObjects)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoAssign)
+ (modules demoAssign)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoLists)
+ (modules demoLists)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoStringInterp)
+ (modules demoStringInterp)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
+
+(executable
+ (name demoPrettyPrinter)
+ (modules demoPrettyPrinter)
+ (libraries Ruby.Lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))

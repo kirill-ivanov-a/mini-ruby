@@ -1,0 +1,28 @@
+opam-version: "2.0"
+name: "Ruby"
+version: "0.0.1"
+synopsis: """ Ruby """
+#description: """ """
+maintainer: "ivanov.kirill.a@mail.ru"
+#authors: "Ivanov Kirill <ivanov.kirill.a@mail.ru>"
+license: "LGPLv3"
+homepage: "not specified"
+#doc: "https://ocaml-ppx.github.io/ppxlib/"
+bug-reports: "not specified"
+depends: [
+  "ocaml" {>= "4.04.1"}
+  #"base"
+  "ppx_expect"
+  "dune" 
+  "angstrom"
+  "ocamlformat" { build }
+  "ppx_deriving"
+  "ppx_show"
+]
+
+
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]

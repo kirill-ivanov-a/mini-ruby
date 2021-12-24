@@ -1,0 +1,14 @@
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A -w -26)
+   (-short-paths))))
+
+(library
+ (name ruby_lib)
+ (public_name Ruby.Lib)
+ (modules Ast Parser Interpreter Tests Pretty_printer Tester)
+ (libraries angstrom ppx_show.runtime str)
+ (inline_tests)
+ (preprocess
+  (pps ppx_expect ppx_show ppx_deriving.eq)))
